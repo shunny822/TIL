@@ -59,4 +59,4 @@
   - Modified : Changes not staged for commit
   - Staged : Changes to be committed
 - Untracked : 버전으로 관리된 적 없는 파일 상태
- -Untracked files
+ - Untracked files
