@@ -1,3 +1,6 @@
+## day3
+- ![Git branch 활용](Git/gitBranch.md)
+
 ## day2
 - ![Git 원격저장소 사용](Git/gitRemote.md)
 
