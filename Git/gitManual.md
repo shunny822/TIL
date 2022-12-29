@@ -37,7 +37,7 @@
 ### git config
 - 커밋하기 위해 사용자 정보 입력
 - git config --global user.name "최수현"
-- git config --global user.email "sw@naver.com"
+- git config --global user.email "sw92522@naver.com"
 - 설정확인 : git config --global -l(엘)
 
 ### git add _file_
