@@ -3,7 +3,7 @@
 <br>
 
 ### 🌞 23.01.03
-- ![Python 형병환과 if문, for문](Python/python_syntax01.md)
+- ![Python 형병환과 제어문](Python/python_syntax.md)
 
 ### 🌞 23.01.02
 - ![Python 변수와 객체](Python/python_basic.md)

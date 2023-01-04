@@ -43,7 +43,9 @@ print(f'원주율은 {pi:.3}. 반지름이 2일 때 원의 넓이는 {pi*2*2}')
 
 # Range
 - range(n, m, s) : n부터 n-1까지 s만큼 증가
+
 - 숫자 시퀀스를 나타내기 위해 사용
+
 - 변경 불가능 immutable하며 반복가능함 iterable
 ```python
 range(3)  # = range(0, 3)
@@ -104,9 +106,30 @@ else :
 <br>
 
 ## 반복문
+### while문
+- 조건식이 참인 경우 반복적으로 코드 실행
+
+- 기본 형식
+  ```python
+  while expression :
+    ~ code ~
+  ```
+
+<예시>
+```python
+a = 0
+while a < 5 :
+  print(a)
+  a += 1
+```
+
+
+
 ### for문
 - 시퀀스를 포함한 순회가능한 객체(iterable)의 모든 요소 순회
+
 - 순회가능한 객체 : string, tuple, list, range, set, dictionary
+
 - 기본 형식
   ```python
   for 변수명 in iterable :
@@ -126,6 +149,7 @@ cf) print 시
 기본값은 모두 출력 후 \n이며 변경 가능
 - end = "" → 모두 출력 후 마지막에 붙는 것
 - sep = "" → 각각의 인자 출력 시 마다 붙는 것
+
 
 ### enumerate()
 - index와 원소 동시에 접근 가능
