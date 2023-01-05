@@ -2,6 +2,9 @@
 
 <br>
 
+### 🌞 23.01.05
+- ![Python 딕셔너리와 모듈](Python/python_dictionary_module.md)
+
 ### 🌞 23.01.04
 - ![Python 함수 기초](Python/python_function01.md)
 

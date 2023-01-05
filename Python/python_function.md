@@ -52,6 +52,11 @@ __input → ■ → output__
   print(round(2.19872, 2))
   # 2.2
   ```
+- sorted(seq) : sequence를 정렬
+  ```python
+  num = [1, 6, 3]
+  print(sorted(num))  # [1, 3, 6]
+  ```
 
 - all(iterable) : iterable의 모든 요소가 참이거나 비어있으면 True 반환
 
