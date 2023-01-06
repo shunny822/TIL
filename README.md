@@ -3,7 +3,7 @@
 <br>
 
 ### 🌞 23.01.06
-- ![Python](Python/python_JSON.md)
+- ![Python 파일 입출력과 JSON](Python/python_JSON.md)
 
 ### 🌞 23.01.05
 - ![Python 딕셔너리와 모듈](Python/python_dictionary_module.md)
