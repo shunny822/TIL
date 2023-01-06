@@ -6,7 +6,7 @@
 - ![Python 딕셔너리와 모듈](Python/python_dictionary_module.md)
 
 ### 🌞 23.01.04
-- ![Python 함수 기초](Python/python_function01.md)
+- ![Python 함수 기초](Python/python_function.md)
 
 ### 🌞 23.01.03
 - ![Python 형병환과 제어문](Python/python_syntax.md)
