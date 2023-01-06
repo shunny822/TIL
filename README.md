@@ -2,6 +2,9 @@
 
 <br>
 
+### 🌞 23.01.06
+- ![Python](Python/python_JSON.md)
+
 ### 🌞 23.01.05
 - ![Python 딕셔너리와 모듈](Python/python_dictionary_module.md)
 
@@ -22,5 +25,5 @@
 - ![Git 원격저장소 사용](Git/gitRemote.md)
 
 ### 🎈 22.12.27
-- ![마크다운](markdown.md)
 - ![Git 기초문법과 흐름](Git/gitManual.md)
+- ![마크다운](markdown.md)
