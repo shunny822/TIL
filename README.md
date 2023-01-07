@@ -2,19 +2,19 @@
 
 <br>
 
-### 🌞 23.01.06
+### 🌱 23.01.06
 - ![Python 파일 입출력과 JSON](Python/python_JSON.md)
 
-### 🌞 23.01.05
+### 🌱 23.01.05
 - ![Python 딕셔너리와 모듈](Python/python_dictionary_module.md)
 
-### 🌞 23.01.04
+### 🌱 23.01.04
 - ![Python 함수 기초](Python/python_function.md)
 
-### 🌞 23.01.03
+### 🌱 23.01.03
 - ![Python 형병환과 제어문](Python/python_syntax.md)
 
-### 🌞 23.01.02
+### 🌱 23.01.02
 - ![Python 변수와 객체](Python/python_basic.md)
 
 --------------------------------------------------
