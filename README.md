@@ -1,7 +1,9 @@
 # 👩‍💻 What I learned 📒🚩
 
-<br>
+### 🌳 23.01.09
+- ![Python 튜플, 세트와 메서드](Python/python_method.md)
 
+--------------------------------------------------
 ### 🌱 23.01.06
 - ![Python 파일 입출력과 JSON](Python/python_JSON.md)
 

@@ -71,19 +71,7 @@ __input → ■ → output__
   print(new_numbers)  # <map object at 0x000~~~~>
   print(list(new_numbers))  # [1, 2, 3]
   ```
-
-- str.strip() : 문자와 공백('\n'도 해당) 제거
-  - strip('chars') : 문자열 앞/뒤의 'chars(문자)' 제거, 괄호가 빈 경우 공백 제거
-  - lstrip('chars') : left, 선행 문자 제거
-  - rstrip('chars') : right, 후행 문자 제거
-  ```python
-  text = ",,,,,123.....water....pp"
-  print(text.lstrip(',123.p'))  # water....pp
-  print(text.rstrip(',123.p'))  # ,,,,,123.....water
-  print(text.strip(',123.p'))   # water
-  ```
-  인자로 여러 문자 전달 시 해당 위치의 일치하는 모든 문자 제거
-
+  
 - 기타 함수
   - bin(x) : 정수를 '0b' 접두사가 붙은 이진 문자열로 반환
   - hex(x) : 정수를 '0x' 접두사가 붙은 16진수 문자열로 반환
