@@ -1,5 +1,8 @@
 # 👩‍💻 What I learned 📒🚩
 
+### 🌳 23.01.10
+- ![Python 사용자 정의 함수](Python/python_function02.md)
+
 ### 🌳 23.01.09
 - ![Python 튜플, 세트와 메서드](Python/python_method.md)
 
