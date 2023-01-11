@@ -1,5 +1,8 @@
 # 👩‍💻 What I learned 📒🚩
 
+### 🌳 23.01.11
+- ![Python 사용자 정의 클래스](Python/python_class.md)
+
 ### 🌳 23.01.10
 - ![Python 사용자 정의 함수](Python/python_function02.md)
 
@@ -31,4 +34,5 @@
 
 ### 🎈 22.12.27
 - ![Git 기초문법과 흐름](Git/gitManual.md)
+
 - ![마크다운](markdown.md)
