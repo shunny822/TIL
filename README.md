@@ -1,5 +1,8 @@
 # 👩‍💻 What I learned 📒🚩
 
+### 🌳 23.01.12
+- ![Python 심화](Python/python_deepen.md)
+
 ### 🌳 23.01.11
 - ![Python 사용자 정의 클래스](Python/python_class.md)
 

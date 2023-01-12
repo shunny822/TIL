@@ -75,7 +75,7 @@ ex) import random
 - random : 숫자/수학 모듈, 임의의 숫자 선택/생성 등
   - random.randint(a, b) : a이상 b 이하 임의의 정수 반환
   - random.choice(seq) : 시퀀스 임의의 요소 반환(비어있는 경우 indexError)
-  - random.chuffle(seq) : 시퀀스 섞음
+  - random.shuffle(seq) : 시퀀스 섞음
   - random.sample(population, k) : 어떤 집단에서 k길이의 무작위 리스트 반환
   ```python
   lotto = range(1, 46)
