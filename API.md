@@ -58,11 +58,40 @@ parameters = {
     'api_key' : '885~~~~~d'
     'language' : 'ko-KR'
     'region' : 'KR'
+    #'query': <movie search 시 함수사용하여 검색하려는 string input 받아야함>
 }  # '요청변수=값'들을 딕셔너리 형태로 정리 
 
 # URL에서 response 받아오기
-r = requests.get(BASE_URL+path, params = parameters).json()
+res = requests.get(BASE_URL+path, params = parameters)
 # 'params'키워드를 사용 시 딕셔너리에 저장된 키와 값이 주소 뒤에 붙음
+print(res.url)
+# 'res'의 전체 URL 출력
+result = res.json()
 # 받아온 response를 JSON형식 문서로 디코딩
-print(r)
+print(result)
 ```
+
+
+## Python-dotenv
+
+외부에 공개하지 않을 정보들이 코드에 들어가야 할 때 환경변수로 설정하여 import 후 사용
+
+1. python-dotenv 설치
+  ```python
+  pip install python-dotenv
+  ```
+
+2. `.env` 파일 생성하여 사용하고자 하는 변수 정의
+  ```python
+  API_KEY = 88d~~~kjflaksj
+  ```
+
+3. 실행 파일에 import하여 사용
+  ```python
+  from dotenv import load_dotenv
+  import os
+
+  load_dotenv()
+  ```
+
+4. `.env` 파일을 `.gitignore`에 추가
