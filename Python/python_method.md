@@ -94,7 +94,9 @@ set(my_list)  # ['서울', '대전', '광주']
   print(numbers.index(3)) # 2
   ```
 - L.reverse() : 순서를 반대로 뒤집음, None 반환
-- L.sort() : 원본 리스트 정렬, None 반환
+- L.sort(key)
+
+   : 원본 리스트 정렬, None 반환, 정렬의 기준으로 key를 사용할 수 있으며 key에는 단일인자를 반환하는 함수가 와야함(보통 lambda 사용)
   ```python
   # sort
   numbers = [3, 2, 5, 1]
@@ -105,6 +107,11 @@ set(my_list)  # ['서울', '대전', '광주']
   result = sorted(numbers)
   print(numbers, result) # [3, 2, 5, 1] [1, 2, 3, 5] 
   # 원본 변경 없이 정렬된 리스트 반환
+  ```
+  ```python
+  # key 사용
+  ranked_movies = [{...}, {...}, {...}] # 요소가 딕셔너리 형태의 영화 정보인 리스트
+  ranked_movies.sort(key = lambda l: l['vote_average'])
   ```
 - L.count(x) : x의 개수 반환
 

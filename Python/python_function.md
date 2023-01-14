@@ -53,10 +53,16 @@ __input → ■ → output__
   # 2.2
   ```
 
-- sorted(seq) : sequence를 정렬
+- sorted(seq, key)
+
+  : sequence를 정렬, 정렬의 기준으로 key를 사용할 수 있으며 key에는 단일인자를 반환하는 함수가 와야함(보통 lambda 사용)
   ```python
   num = [1, 6, 3]
   print(sorted(num))  # [1, 3, 6]
+  ```
+  ```python
+  populars = [{...}, {...}, {...}] # 각 요소가 딕셔너리 형태의 영화 정보인 리스트
+  ranked_movies = sorted(populars['results'], key = lambda l: l['vote_average'])
   ```
 
 - all(iterable) : iterable의 모든 요소가 참이거나 비어있으면 True 반환
