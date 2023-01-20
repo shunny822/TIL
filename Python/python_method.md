@@ -96,7 +96,7 @@ set(my_list)  # ['서울', '대전', '광주']
 - L.reverse() : 순서를 반대로 뒤집음, None 반환
 - L.sort(key)
 
-   : 원본 리스트 정렬, None 반환, 정렬의 기준으로 key를 사용할 수 있으며 key에는 단일인자를 반환하는 함수가 와야함(보통 lambda 사용)
+   : 원본 리스트 정렬, None 반환, 정렬의 기준으로 reverse, key를 사용할 수 있으며(sorted도 동일) key에는 단일인자를 반환하는 함수가 와야함(보통 lambda 사용)
   ```python
   # sort
   numbers = [3, 2, 5, 1]
@@ -107,6 +107,11 @@ set(my_list)  # ['서울', '대전', '광주']
   result = sorted(numbers)
   print(numbers, result) # [3, 2, 5, 1] [1, 2, 3, 5] 
   # 원본 변경 없이 정렬된 리스트 반환
+  ```
+  ```python
+  # reverse
+  numbers.sort(reverse=True)  # [5, 3, 2, 1]
+  # reverse의 기본값은 False(오름차순)
   ```
   ```python
   # key 사용
