@@ -22,6 +22,10 @@
 - Minheap(최소힙)으로 구현되어 있음
 
 - Maxheap을 구현하고 싶으면 heap에 데이터를 넣고 뺄 때 '-'를 붙이면 됨
+  ```python
+  heapq.heappush(list, -x)
+  print(-heapq.heappop(list))
+  ```
 
 - 삽입, 삭제, 수정, 조회 연산의 속도가 리스트보다 빠름
 
