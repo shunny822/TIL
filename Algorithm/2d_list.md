@@ -142,3 +142,31 @@ for i in range(n):
   for j in range(n):
     turn_matrix[i][j] = matrix[n-1-i][n-1-j]
 ```
+
+### zip 함수
+- 기본 형태
+  ```python
+  zip(iterable, iterable.....)
+  ```
+
+- 각 iterable의 i 번째 항목들을 묶어 tuple 생성
+```python
+for i in zip(range(3), ['strawberry', 'grapes', 'peach'])
+  print(i)
+
+# (0, 'strawberry')
+# (1, 'grapes')
+# (2, 'peach')
+```
+
+- 행과 열 바꾸기(전치)
+```python
+matrix = [
+  [1, 2, 3], 
+  [4, 5, 6], 
+  [7, 8, 9]
+]
+
+print(list(zip(*matrix)))
+# [(1, 4, 7), (2, 5, 8), (3, 6, 9)]
+```
