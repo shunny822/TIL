@@ -1,5 +1,11 @@
 # 👩‍💻 What I learned 📒🚩
 
+### ➰23.02.08
+- [데이터베이스 - 관계형 데이터베이스](Database/relational_database.md)
+
+- [데이터베이스 - Workbench 가이드](Database/Workbench_guide.md)
+
+------------------------------------------------
 ### ⚡ 23.02.07
 - [알고리즘 - 재귀함수](Algorithm/recursive_function.md)
 
