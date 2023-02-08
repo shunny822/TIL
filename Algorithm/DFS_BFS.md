@@ -1,4 +1,4 @@
-# 깊이우선탐색 DFS(Depth-First Search)
+# DFS와 BFS
 
 ## 그래프 탐색 알고리즘
 
@@ -13,7 +13,7 @@
 
 <br>
 
-## DFS
+## 깊이우선탐색 DFS(Depth-First Search)
 
 ### 개념과 특징
 ![DFS](DFS.jpg)
@@ -37,7 +37,7 @@
 
 ### DFS의 구현 방식
 ```python
-# 탐색할 그래프(인접 리스)
+# 탐색할 그래프(인접 리스트)
 graph = [
   [1, 2],    # 0
   [0, 3, 4], # 1
@@ -64,6 +64,56 @@ def dfs(start):
       if not visited[adj]:
         visited[adj] = True   # 방문기록 남기기
         stack.append(adj)     # 돌아갈 곳으로 기록
+
+dfs(0)
+```
+
+<br>
+
+## 너비우선탐색 BFS(Breadth-First Search)
+
+### 개념과 특징
+- 시작 정점에서 가까운 노드부터 우선적으로 탐색하는 알고리즘
+
+- 가까운 노드를 순차적으로 순회해야 하므로 선입선출 구조의 `큐`가 적합
+
+- 특징 : 모든 정점을 방문할 필요가 없거나 최단거리를 구하는 경우 활용도가 높음
+
+### BFS의 동작 과정
+- 탐색을 진행할 그래프(인접행렬 또는 인접 리스트)와 각 정점을 방문했는지를 기록할 체크리스트 필요
+
+- 현재 정점 방문처리 → 인접한 정점을 큐에 넣고 순차적 방문
+
+### BFS의 구현 방식
+```python
+from collections import deque
+# 탐색할 그래프(인접 리스트)
+graph = [
+  [1, 2],    # 0
+  [0, 3, 4], # 1
+  [0, 4, 5], # 2
+  [1],       # 3
+  [1, 2, 6], # 4
+  [2],       # 5
+  [4]        # 6
+]
+
+visited [False] * 7 # n개의 방문 처리 리스트 생성
+# [False, False, False, False, False, False, False]
+
+def bfs(start):
+  queue = deque([start])
+  visited[start] = True
+
+  # 방문 시작, 큐가 빌때까지 순회
+  while queue:
+    cur = queue.popleft()    # 현재 방문정점
+
+    # 현재 정점의 인접노드 순회
+    for adj in graph[cur]:
+      if not visited[adj]:
+        visited[adj] = True   # 방문기록 남기기
+        queue.append(adj)     
 
 dfs(0)
 ```
