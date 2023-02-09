@@ -1,5 +1,8 @@
 # 👩‍💻 What I learned 📒🚩
 
+### ➰23.02.09
+- [데이터베이스 - SQL 01](Database/SQL_basic01.md)
+
 ### ➰23.02.08
 - [데이터베이스 - 관계형 데이터베이스](Database/relational_database.md)
 
