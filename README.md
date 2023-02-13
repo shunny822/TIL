@@ -1,5 +1,8 @@
 # 👩‍💻 What I learned 📒🚩
 
+### ➰23.02.13
+- [데이터베이스 - SQL 02](Database/SQL_basic02.md)
+
 ### ➰23.02.09
 - [데이터베이스 - SQL 01](Database/SQL_basic01.md)
 
