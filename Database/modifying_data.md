@@ -1,4 +1,4 @@
-# Managing Table
+# Modifying Data
 
 ## Insert data into table
 
