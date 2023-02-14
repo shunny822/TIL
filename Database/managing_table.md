@@ -18,7 +18,7 @@ CREATE TABLE table_name (
 ### 예시
 ```sql
 CREATE TABLE examples (
-  examId INT AUTO_INCREMENT,
+    examId INT AUTO_INCREMENT,
     lastName VARCHAR(50) NOT NULL,
     firstName VARCHAR(50) NOT NULL,
     PRIMARY KEY (examId)
