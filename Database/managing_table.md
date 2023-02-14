@@ -119,12 +119,12 @@ CHANGE COLUMN
 - CHANGE COLUMN 이후 기존필드 이름, 변경할 필드 이름, 데이터타입 및 제약조건 작성
 
 - 예시
-```sql
-ALTER TABLE
-	examples
-CHANGE COLUMN
+  ```sql
+  ALTER TABLE
+  	examples
+  CHANGE COLUMN
 	country state VARCHAR(100) NOT NULL;
-```
+  ```
   - 데이터타입과 제약조건은 기존과 같더라도 생략 불가능, 변경 가능하여 modify의 역할도 함께 
 
 
