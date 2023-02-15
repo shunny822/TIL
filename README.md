@@ -1,6 +1,9 @@
 # 👩‍💻 What I learned 📒🚩
 
 ### ➰23.02.13
+- [데이터베이스 - SQL JOIN](Database/multi_table_queries.md)
+
+### ➰23.02.13
 - [데이터베이스 - SQL modifying data](Database/modifying_data.md)
 
 - [데이터베이스 - SQL managing table](Database/managing_table.md)
