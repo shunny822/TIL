@@ -1,11 +1,12 @@
 # 👩‍💻 What I learned 📒🚩
 
-### ➰23.02.13
+### ➿23.02.13
 - [데이터베이스 - Nested Queries](Database/nested_queries.md)
 
-### ➰23.02.13
+### ➿23.02.13
 - [데이터베이스 - JOIN](Database/multi_table_queries.md)
 
+------------------------------------------------
 ### ➰23.02.13
 - [데이터베이스 - modifying data](Database/modifying_data.md)
 
