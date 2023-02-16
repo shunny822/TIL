@@ -109,3 +109,52 @@ LEFT [OUTER] JOIN table2
   ON table1.fk = table.pk;
 ```
 - LEFT JOIN과 비교하였을 때 테이블의 위치는 변함 없으며 LEFT JOIN에서 적용되는 것이 반대로 적용
+
+
+
+### 응용
+
+- UNION
+  ```SQL
+  SELECT customerNumber, officeCode, t1.city, t2.city
+  FROM customers AS t1
+  LEFT JOIN offices AS t2 ON t1.city = t2.city
+
+  UNION
+
+  SELECT customerNumber, officeCode, t1.city, t2.city
+  FROM customers AS t1
+  RIGHT JOIN offices AS t2 ON t1.city = t2.city
+
+  ORDER BY
+    customerNumber DESC;
+  ```
+  - t1과 t2의 합집합으로 모든 레코드 조회
+
+- 테이블 3개 연결
+  ```sql
+  SELECT
+    t1.orderNumber,
+    t1.productCode,
+    t2.orderDate,
+    t3.productName
+  FROM orderdetails AS t1
+  INNER JOIN orders AS t2 ON t1.orderNumber = t2.orderNumber
+  INNER JOIN products AS t3 ON t1.productCode = t3.productCode
+  ORDER BY
+    orderNumber;
+  ```
+  - t1을 기준으로 t1의 필드와 같은 것을 fk, pk로 하여 join
+  ```sql
+  SELECT
+    t1.orderNumber,
+    t1.productCode,
+    t2.orderDate,
+    t3.productName
+  FROM orderdetails t1
+  INNER JOIN orders t2 USING (orderNumber)
+  INNER JOIN products t3 USING (productCode)
+  ORDER BY
+    orderNumber;
+  ```
+  - FK와 PK는 동일하므로 USING을 사용하여 간단하게 작성 가능, AS 생략 가능
