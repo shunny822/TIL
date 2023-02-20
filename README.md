@@ -1,5 +1,8 @@
 # 👩‍💻 What I learned 📒🚩
 
+### ➿23.02.20
+- [데이터베이스 - Transaction, Trigger](Database/SQL_advanced01.md)
+
 ### ➿23.02.13
 - [데이터베이스 - Nested Queries](Database/nested_queries.md)
 
