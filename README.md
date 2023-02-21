@@ -1,5 +1,8 @@
 # 👩‍💻 What I learned 📒🚩
 
+### ➿23.02.21
+- [데이터베이스 - 정규화와 DB 모델링](Database/SQL_advanced02.md)
+
 ### ➿23.02.20
 - [데이터베이스 - Transaction, Trigger](Database/SQL_advanced01.md)
 
