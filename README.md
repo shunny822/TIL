@@ -1,5 +1,8 @@
 # 👩‍💻 What I learned 📒🚩
 
+### 🎨23.02.23
+- [웹 - CSS Box Model](Web_front/box_model.md)
+
 ### 🎨23.02.22
 - [웹 - HTML과 CSS 기초](Web_front/web_basic01.md)
 
