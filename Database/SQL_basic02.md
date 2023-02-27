@@ -64,25 +64,26 @@
 
 - LIKE operator : 값이 특정 패턴에 일치하는지 확인, Wildcard Characters(%, _)
   - '%' : 0개 이상의 문자열과 일치여부 확인
-```sql
--- employees에서 lastName이 son으로 끝나는 데이터
-SELECT
-  lastName, firstName
-FROM
-  employees
-WHERE
-  lastName LIKE '%son';
-```
-  - '_' : 단일 문자와 일치여부 확인(자리수를 알아야 함)
-```sql
--- employees에서 firstName이 4자리이며 y로 끝나는 데이터
-SELECT
-  lastName, firstName
-FROM
-  employees
-WHERE
-  firstName LIKE '___y';
-```
+  ```sql
+  -- employees에서 lastName이 son으로 끝나는 데이터
+  SELECT
+    lastName, firstName
+  FROM
+    employees
+  WHERE
+    lastName LIKE '%son';
+  ```
+  
+- '_' : 단일 문자와 일치여부 확인(자리수를 알아야 함)
+  ```sql
+  -- employees에서 firstName이 4자리이며 y로 끝나는 데이터
+  SELECT
+    lastName, firstName
+  FROM
+    employees
+  WHERE
+    firstName LIKE '___y';
+  ```
 
 
 ### LIMIT clause
