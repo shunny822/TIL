@@ -13,7 +13,7 @@
 > 다른 요소 위에 놓기, 화명 특정 위치에 고정시키기 
 
 ### Position 이동 방향
-![position 이동방향](./position.jpg)
+![position 이동방향](image/position.jpg)
 
 총 다섯 방향
 

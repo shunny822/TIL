@@ -7,7 +7,7 @@
 ## 구성요소
 ### 박스의 구성
 
-![박스 구성](./box.jpg)
+![박스 구성](image/box.jpg)
 
 - Margin : 다른 박스와의 간격 조정
 
@@ -15,7 +15,7 @@
 
 ### 박스의 요소
 
-![박스 요소](./box02.jpg)
+![박스 요소](image/box02.jpg)
 
 : top, bottom, left, right, width, height
 
