@@ -105,6 +105,32 @@
 
     - 문서에서 요소가 차지하는 공간이 없어짐
 
+```html
+<head>
+  ...
+  <style>
+    body {
+      height: 1500px;
+    }
+
+    .sticky {
+      position: sticky;
+      background-color: lightblue;
+      border: 1px solid black;
+      top: 0;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <div class="sticky">sticky</div>
+    <div> aa </div>
+    <div class="sticky">sticky</div>
+    <div> aa </div>
+  </div>
+</body>
+```
+
 5. sticky
     - 요소를 Normal Flow에 따라 배치
 
