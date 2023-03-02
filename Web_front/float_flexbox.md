@@ -106,9 +106,12 @@ ex) 신문 레이아웃
 
 4. justify-content
     ```css
-    justify-content: center;
     justify-content: flex-start;
+    justify-content: center;
     justify-content: flex-end;
+    justify-content: space-between;
+    justify-content: space-around;
+    justify-content: space-evenly;
     ```
     - 주축을 따라 flex item과 주위에 공간을 분배
 
@@ -117,9 +120,12 @@ ex) 신문 레이아웃
     ```css
     flex-wrap: wrap;
 
-    align-content: center;
     align-content: flex-start;
+    align-content: center; 
     align-content: flex-end;
+    align-content: space-between;
+    align-content: space-around;
+    align-content: space-evenly;
     ```
     - 교차축을 따라 flex item과 주위에 공간을 분배
 
@@ -130,6 +136,8 @@ ex) 신문 레이아웃
 
 6. align-items
     ```css
+    align-items: stretch;
+    align-items: flex-start;
     align-items: center;
     align-items: flex-end;
     ```
@@ -140,6 +148,8 @@ ex) 신문 레이아웃
 
 7. align-self
     ```css
+    align-self: stretch;
+    align-self: flex-start;
     align-self: center;
     align-self: flex-end;
     ```
