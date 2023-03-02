@@ -1,5 +1,8 @@
 # 👩‍💻 What I learned 📒🚩
 
+### 🎨23.03.02
+- [웹 - Semantic Web](Web_front/semantic_web.md)
+
 ### 🎨23.02.28
 - [웹 - Float와 Flexbox](Web_front/float_flexbox.md)
 
