@@ -46,6 +46,12 @@
 - [데이터베이스 - Workbench 가이드](Database/Workbench_guide.md)
 
 ------------------------------------------------
+### ⚡ 23.03.05
+- [알고리즘 - 그리디](Algorithm/greedy.md)
+
+### ⚡ 23.02.09
+- [알고리즘 - 다이나믹 프로그래밍](Algorithm/DP.md)
+
 ### ⚡ 23.02.07
 - [알고리즘 - 재귀함수](Algorithm/recursive_function.md)
 
