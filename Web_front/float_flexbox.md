@@ -186,6 +186,6 @@ ex) 신문 레이아웃
     ```css
     flex-basis: 300px;
     ```
-    - flex item의 초기 크기값을 지정(이 이상 커지지 않음)
+    - flex item의 최소 크기값을 지정
 
     - flex-basis와 width값을 동시에 적용한 경우 flex-basis가 우선
