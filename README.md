@@ -1,6 +1,9 @@
 # 👩‍💻 What I learned 📒🚩
 
 ### 🌈23.03.06
+- [웹 - Bootstrap Grid system](Web_front/grid_system.md)
+
+### 🌈23.03.06
 - [웹 - Bootstrap](Web_front/bootstrap.md)
 
 ------------------------------------------------
