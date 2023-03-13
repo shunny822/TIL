@@ -21,7 +21,7 @@
 
 |             유형              |            역할             |       SQL 키워드     |
 |-------------------------------|----------------------------|----------------------|
-|DDL(Data Definition Language)  |데이터의 기본구조 및 형식 변경| CREATE, DROP, ALTER  |
+|DDL(Data Definition Language)  |데이터의 기본구조 및 형식 변경| CREATE, DROP, ALTER, RENAME  |
 |DQL(Data Query Language)       |         데이터 검색         |       SELECT         |
 |DML(Data Manipulation Language)|데이터 조작(추가, 수정, 삭제) |INSERT, UPDATE, DELETE|
 |DCL(Data Control Language)     |데이터 및 작업에 대한 사용자권한 제어|COMMIT, ROLLBACK, GRANT, REVOKE|
