@@ -85,7 +85,7 @@
     - 일반 속성 조작
       - 조회 : .getAttribute()
 
-      - 설정(수정) : .getAttribute()
+      - 설정(수정) : .setAttribute()
 
       - 삭제 : .removeAttribute()
 
