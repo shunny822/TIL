@@ -120,7 +120,6 @@
     <div></div>
     <script>
         // 생성
-        console.log(document.createElement('h1'))
         const h1Tag = document.createElement('h1')
         h1Tag.textContent = '제목'
         console.log(h1Tag)
