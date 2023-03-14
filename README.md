@@ -1,7 +1,10 @@
 # 👩‍💻 What I learned 📒🚩
 
+### 🌈23.03.14
+- [JavaScript syntax 01](Web_front/javascript02.md)
+
 ### 🌈23.03.13
-- [자바스크립트 01](Web_front/javascript01.md)
+- [JavaScript basic](Web_front/javascript01.md)
 
 ### 🌈23.03.08
 - [웹 - Bootstrap 반응형 웹 디자인](Web_front/responsive_design.md)
