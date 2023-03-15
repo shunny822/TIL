@@ -1,5 +1,12 @@
 # 👩‍💻 What I learned 📒🚩
 
+### 🌈23.03.1
+- [JavaScript function](Web_front/js_function.md)
+
+- [JavaScript object](Web_front/js_object.md)
+
+- [JavaScript array](Web_front/js_array.md)
+
 ### 🌈23.03.14
 - [JavaScript syntax 01](Web_front/javascript02.md)
 
