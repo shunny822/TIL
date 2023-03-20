@@ -1,5 +1,9 @@
 # 👩‍💻 What I learned 📒🚩
 
+### 🌼23.03.20
+- [Django - django의 이해](Django/1week/django01.md)
+
+------------------------------------------------
 ### 🌈23.03.16
 - [JavaScript event](Web_front/event.md)
 
