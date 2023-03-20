@@ -21,32 +21,32 @@ matrix = [
 1. 직접 작성
 
 2. 반복문
-  ```python
-  matrix = []
-  # 0으로 이루어진 nxm 행렬
-  for _ in range(n):
-    matrix.append([0] * m)
-  ```
+    ```python
+    matrix = []
+    # 0으로 이루어진 nxm 행렬
+    for _ in range(n):
+      matrix.append([0] * m)
+    ```
 
 3. list comprehension
-  ```python
-  matrix = [[0]*m for _ in range(n)]
-  ```
+    ```python
+    matrix = [[0]*m for _ in range(n)]
+    ```
 
 <br>
 
 ## 입력 받기
 1. for 문
-  ```python
-  matrix = []
-  for _ in range(n):
-    matrix.append(list(input()))
-  ```
+    ```python
+    matrix = []
+    for _ in range(n):
+      matrix.append(list(input()))
+    ```
 
 2. list comprehension
-```python
-matrix = [list(input()) for _ in range(n)]
-```
+    ```python
+    matrix = [list(input()) for _ in range(n)]
+    ```
 
 <br>
 
@@ -68,22 +68,22 @@ i와 j 를 바꾸면 열 우선 순회!
 ### 총합 구하기
 
 1. for문 이용
-  ```python
-  matrix = [
-    [1, 1, 1, 1], 
-    [1, 1, 1, 1], 
-    [1, 1, 1, 1]
-  ]
-  total = 0
-  for i in range(3):
-    for j in range(4):
-      total += matrix[i][j]
-  ```
+    ```python
+    matrix = [
+      [1, 1, 1, 1], 
+      [1, 1, 1, 1], 
+      [1, 1, 1, 1]
+    ]
+    total = 0
+    for i in range(3):
+      for j in range(4):
+        total += matrix[i][j]
+    ```
 
 2. pythonic한 방법
-  ```python
-  total = sum(map(sum, matrix))
-  ```
+    ```python
+    total = sum(map(sum, matrix))
+    ```
 
 ### 최대값, 최소값
 ```python
@@ -150,23 +150,23 @@ for i in range(n):
   ```
 
 - 각 iterable의 i 번째 항목들을 묶어 tuple 생성
-```python
-for i in zip(range(3), ['strawberry', 'grapes', 'peach'])
-  print(i)
+  ```python
+  for i in zip(range(3), ['strawberry', 'grapes', 'peach'])
+    print(i)
 
-# (0, 'strawberry')
-# (1, 'grapes')
-# (2, 'peach')
-```
+  # (0, 'strawberry')
+  # (1, 'grapes')
+  # (2, 'peach')
+  ```
 
 - 행과 열 바꾸기(전치)
-```python
-matrix = [
-  [1, 2, 3], 
-  [4, 5, 6], 
-  [7, 8, 9]
-]
+  ```python
+  matrix = [
+    [1, 2, 3], 
+    [4, 5, 6], 
+    [7, 8, 9]
+  ]
 
-print(list(zip(*matrix)))
-# [(1, 4, 7), (2, 5, 8), (3, 6, 9)]
-```
+  print(list(zip(*matrix)))
+  # [(1, 4, 7), (2, 5, 8), (3, 6, 9)]
+  ```
