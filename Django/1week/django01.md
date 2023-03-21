@@ -86,6 +86,7 @@
       ```bash
       $ deactivate
       ```
+      또는 'ctrl + c'
     
     - pip를 통해 현재 가상환경인지 확인
       ```bash
