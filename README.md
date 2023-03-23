@@ -1,13 +1,13 @@
 # 👩‍💻 What I learned 📒🚩
 
 ### 🌼23.03.20
-- [Django - 템플릿, 요청과 응답](Django/1week/django03.md)
+- [Django - 템플릿, 요청과 응답](Django/1week/template.md)
 
 ### 🌼23.03.20
-- [Django - 디자인 패턴](Django/1week/django02.md)
+- [Django - 디자인 패턴](Django/1week/django_MTV.md)
 
 ### 🌼23.03.20
-- [Django - django의 이해](Django/1week/django01.md)
+- [Django - django의 이해](Django/1week/django_basic.md)
 
 ------------------------------------------------
 ### 🌈23.03.16
