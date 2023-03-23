@@ -1,6 +1,9 @@
 # 👩‍💻 What I learned 📒🚩
 
 ### 🌼23.03.20
+- [Django - URLs](Django/1week/URLs.md)
+
+### 🌼23.03.20
 - [Django - 템플릿, 요청과 응답](Django/1week/template.md)
 
 ### 🌼23.03.20
