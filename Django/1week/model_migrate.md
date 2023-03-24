@@ -144,3 +144,14 @@ class TODO(models.Model):
 1. migration 파일 삭제(폴더를 지우지 않도록 주의!!!)
 
 2. db.sqlite3 파일 삭제
+
+
+### 언어와 시간 변경
+- settings.py에서 변경 가능
+
+- 언어 : LANGUAGE_CODE = 'en-us' → 'ko-kr'(공식적으로 영어를 한국어로 번역하여 출력)
+
+- 시간
+  - TIME_ZONE = 'UTC' → 'Asia/Seoul'
+
+  - USE_TZ = False로 변경(models에 변경된 TIME_ZONE을 적용시키기 위함, True일 떄는 template, forms의 datetime에만 변경된 TIME_ZONE 적용됨)
