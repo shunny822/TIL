@@ -172,3 +172,17 @@
   <p>{{ message }}를 받았습니다!</p>
   {% endblock content %}
   ```
+
+<br>
+
+## 참고
+### 추가 템플릿 경로 지정
+- settings.py에서 TEMPLATES 부분에 'DIRS'가 빈 리스트로 존재함
+
+- 기본적으로 app의 templates를 시작 경로로 하는데 'DIRS' 리스트에 추가적으로 경로 지정 가능
+
+- `'DIRS': [ BASE_DIR / 'templates' ]`를 추가 시 최상단 경로의 바로 하위에 있는 templates 폴더도 시작 경로로 추가됨
+
+- 이로 인해 여러 앱에서 extends하는 부모 템플릿 관리가 용이함
+
+- 각 app/templates에 app_name 폴더를 추가하고 그 안에 템플릿 작성 시 경로 지정이 편함 ex) pages/templates/pages
