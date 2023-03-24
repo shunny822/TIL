@@ -1,12 +1,15 @@
 # 👩‍💻 What I learned 📒🚩
 
-### 🌼23.03.20
+### 🌼23.03.24
+- [Django - Model과 Migrations](Django/1week/model_migrate.md)
+
+### 🌼23.03.23
 - [Django - URLs](Django/1week/URLs.md)
 
-### 🌼23.03.20
+### 🌼23.03.22
 - [Django - 템플릿, 요청과 응답](Django/1week/template.md)
 
-### 🌼23.03.20
+### 🌼23.03.21
 - [Django - 디자인 패턴](Django/1week/django_MTV.md)
 
 ### 🌼23.03.20
