@@ -88,6 +88,9 @@
 - [데이터베이스 - Workbench 가이드](Database/Workbench_guide.md)
 
 ------------------------------------------------
+### ⚡ 23.03.25
+- [알고리즘 - 이진탐색](Algorithm/binary_search.md)
+
 ### ⚡ 23.03.09
 - [알고리즘 - 투포인터](Algorithm/two_pointer.md)
 
