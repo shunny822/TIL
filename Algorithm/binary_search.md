@@ -18,9 +18,6 @@
 [BOJ 2805번 나무 자르기](https://www.acmicpc.net/problem/2805)
 
 ```python
-import sys
-input = sys.stdin.readline
-
 def cut(start, end):
   # 중간점의 높이와 이때의 얻는 나무 길이를 구함
     mid_h = (end + start) // 2
@@ -29,14 +26,15 @@ def cut(start, end):
         if tree > mid_h:
             mid += (tree - mid_h) * num
     
-    # 얻은 나무의 합이 구하려는 값과 같거나
-    # 범위가 계속 줄어 중간점이 시작점과 같아진 경우 프린트 후 종료
-    if mid == m or start == mid_h:
+    # start가 역전되면 범위가 끝난 것이기 때문에 종료
+    if start > end:
         return print(mid_h)
+    # 현재의 값이 더 작으면 더 낮은 높이로 잘라야 하므로 end에 mid_h-1
     elif mid < m:
-        cut(start, mid_h)
+        cut(start, mid_h-1)
+    # 반대이면 더 높은 높이로 잘라야 하므로 start에 mid_h+1
     else:
-        cut(mid_h, end)
+        cut(mid_h+1, end)
 
 n, m = map(int, input().split())
 trees = {}
