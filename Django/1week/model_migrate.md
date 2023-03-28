@@ -78,7 +78,7 @@ class TODO(models.Model):
     category = models.CharField(max_length=20, default='기타') # 필드 추가
 ```
 ![migrations](../image/migration.jpg)
-- 기존 테이블이 존재하기 때문에 필드를 추가할 때 필드의 기본값 설정이 필요
+- 기존 테이블이 존재하는 경우 DB는 기본적으로 빈값을 허용하지 않기 때문에 필드를 추가할 때 필드의 기본값 설정이 필요
 
 - 1번은 직접 기본값을 입력하는 방법
   - 1번 선택 시 날짜 데이터의 경우 django가 제안하는 기본값(timezone.now) 사용 권장(Enter)
