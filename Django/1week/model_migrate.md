@@ -151,7 +151,4 @@ class TODO(models.Model):
 
 - 언어 : LANGUAGE_CODE = 'en-us' → 'ko-kr'(공식적으로 영어를 한국어로 번역하여 출력)
 
-- 시간
-  - TIME_ZONE = 'UTC' → 'Asia/Seoul'
-
-  - USE_TZ = False로 변경(models에 변경된 TIME_ZONE을 적용시키기 위함, True일 떄는 template, forms의 datetime에만 변경된 TIME_ZONE 적용됨)
+- 시간 : TIME_ZONE = 'UTC' → 'Asia/Seoul'
