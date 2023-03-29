@@ -1,5 +1,8 @@
 # 👩‍💻 What I learned 📒🚩
 
+### 🌼23.03.29
+- [Django - ORM with View](Django/2week/ORM_with_view.md)
+
 ### 🌼23.03.28
 - [Django - ORM QuerySet과 CRUD](Django/2week/ORM.md)
 
