@@ -98,39 +98,64 @@ ex) Article.objects.all()
 
   - 특정 조건의 데이터를 조회하는 filter, 조회 조건을 설정하는 Field lookups 외에도 다양한 API 존재
 
-- 실습
-  ```python
-  # 1. pk 필드가 1인 단일 데이터의 journalist 필드 조회
-  Newspaper.objects.get(pk=1).journalist
 
-  # 2. journalist 필드가 Laney Mccullough인 데이터 개수 조회
-  Newspaper.objects.filter(journalist='Laney Mccullough').count()
+<br>
 
-  # 3. pk 필드 기준 내림차순으로 정렬한 모든 데이터 조회
-  Newspaper.objects.order_by('-pk')
+## ORM UPDATE
+변수에 인스턴스 할당 - 값 변경 - 저장
+```python
+news = Newspaper.objects.get(pk=1)
+news.title = 'hello'
+news.save()
+```
 
-  # 4. created_at 필드 기준 내림차순으로 정렬한 모든 데이터 조회
-  Newspaper.objects.order_by('-created_at')
 
-  # 5. journalist 필드가 Britney를 포함하는 데이터 개수 조회
-  Newspaper.objects.filter(journalist__contains='Britney').count()
+<br>
 
-  # 6. journalist 필드가 ['Britney Mahoney', 'Arianna Walls', 'Carl Short']에 속하는 데이터 개수 조회
-  Newspaper.objects.filter(journalist__in=['Britney Mahoney', 'Arianna Walls', 'Carl Short']).count()
+## ORM CREATE
+변수에 인스턴스 할당 - delete 메서드로 삭제
+```python
+news = Newspaper.objects.get(pk=1)
+news.delete()
+# delete 시 삭제된 데이터 반환됨
+```
 
-  # 7. created_at 필드가 2000-01-01 이후 데이터 개수 조회
-  Newspaper.objects.filter(created_at__date__gte='2000-01-01').count()
 
-  """
-  8. 마지막 단일 데이터의 title, content, journalist 필드를 조회하고 아래와 같은 형식으로 출력
-  답
-  title : Teach father within million consumer baby its.
-  content : Then member effort want site. Radio represent yard bag fine. Congress movie ten along.
-  Hand receive agree science present main. Other member every.
-  journalist : Laney Mccullough
-  """
-  last = Newspaper.objects.latest()
-  print('title :', last.title)
-  print('content :', last.content)
-  print('journalist :', last.journalist)
-  ```
+<br>
+
+## 실습
+```python
+# 1. pk 필드가 1인 단일 데이터의 journalist 필드 조회
+Newspaper.objects.get(pk=1).journalist
+
+# 2. journalist 필드가 Laney Mccullough인 데이터 개수 조회
+Newspaper.objects.filter(journalist='Laney Mccullough').count()
+
+# 3. pk 필드 기준 내림차순으로 정렬한 모든 데이터 조회
+Newspaper.objects.order_by('-pk')
+
+# 4. created_at 필드 기준 내림차순으로 정렬한 모든 데이터 조회
+Newspaper.objects.order_by('-created_at')
+
+# 5. journalist 필드가 Britney를 포함하는 데이터 개수 조회
+Newspaper.objects.filter(journalist__contains='Britney').count()
+
+# 6. journalist 필드가 ['Britney Mahoney', 'Arianna Walls', 'Carl Short']에 속하는 데이터 개수 조회
+Newspaper.objects.filter(journalist__in=['Britney Mahoney', 'Arianna Walls', 'Carl Short']).count()
+
+# 7. created_at 필드가 2000-01-01 이후 데이터 개수 조회
+Newspaper.objects.filter(created_at__date__gte='2000-01-01').count()
+
+"""
+8. 마지막 단일 데이터의 title, content, journalist 필드를 조회하고 아래와 같은 형식으로 출력
+답
+title : Teach father within million consumer baby its.
+content : Then member effort want site. Radio represent yard bag fine. Congress movie ten along.
+Hand receive agree science present main. Other member every.
+journalist : Laney Mccullough
+"""
+last = Newspaper.objects.latest()
+print('title :', last.title)
+print('content :', last.content)
+print('journalist :', last.journalist)
+```

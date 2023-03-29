@@ -1,7 +1,7 @@
 # 👩‍💻 What I learned 📒🚩
 
 ### 🌼23.03.28
-- [Django - ORM QuerySet API](Django/2week/ORM.md)
+- [Django - ORM QuerySet과 CRUD](Django/2week/ORM.md)
 
 ### 🌼23.03.24
 - [Django - Model과 Migrations](Django/1week/model_migrate.md)
