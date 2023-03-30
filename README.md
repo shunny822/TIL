@@ -1,5 +1,8 @@
 # 👩‍💻 What I learned 📒🚩
 
+### 🌼23.03.30
+- [Django - ORM with View 2](Django/2week/ORM_with_view2.md)
+
 ### 🌼23.03.29
 - [Django - ORM with View](Django/2week/ORM_with_view.md)
 
