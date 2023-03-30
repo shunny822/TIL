@@ -112,7 +112,7 @@ news.save()
 
 <br>
 
-## ORM CREATE
+## ORM DELETE
 변수에 인스턴스 할당 - delete 메서드로 삭제
 ```python
 news = Newspaper.objects.get(pk=1)
