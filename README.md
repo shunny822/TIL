@@ -1,6 +1,9 @@
 # 👩‍💻 What I learned 📒🚩
 
 ### 🌷23.04.03
+- [Django - Authentication system](Django/3week/auth_system.md)
+
+### 🌷23.04.03
 - [Django - Form과 ModelForm](Django/3week/form.md)
 
 ------------------------------------------------
