@@ -205,7 +205,7 @@ def logout(request):
 <!-- accounts/index.html -->
 
 <h2>사용자 정보 - {{ user }}</h2> <br>
-{% if user.is_authenticated %}
+{% if request.user.is_authenticated %}
   <h3>{{ user }}님 안녕하세요!</h3>
   <form action="{% url 'accounts:logout' %}" method="POST">
     {% csrf_token %}
