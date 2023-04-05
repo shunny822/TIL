@@ -56,9 +56,9 @@
   - 기존에 input tag들을 `{{ form.as_p }}` 하나로 대체
 
   - rendering option([공식문서 참고](https://docs.djangoproject.com/en/3.2/topics/forms/))
-    - {{ form.as_table }} will render them as table cells wrapped in <tr> tags
-    - {{ form.as_p }} will render them wrapped in <p> tags
-    - {{ form.as_ul }} will render them wrapped in <li> tags
+    - {{ form.as_table }} will render them as table cells wrapped in `<tr>` tags
+    - {{ form.as_p }} will render them wrapped in `<p>` tags
+    - {{ form.as_ul }} will render them wrapped in `<li>` tags
 
 → 페이지에서 개발자도구로 보면 input tag와 name, required 속성 등이 자동으로 생성됨을 확인 가능!!
 
