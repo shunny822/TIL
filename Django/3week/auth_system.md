@@ -238,4 +238,4 @@ def logout(request):
 
 - context로 직접 작성하여 넘겨주지 않아도 user의 값을 불러올 수 있음
 
-- user.is_authenticated : 인증된 사용자의 경우 True 반환
+- request.user.is_authenticated : 인증된 사용자의 경우 True 반환
