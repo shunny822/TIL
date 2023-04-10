@@ -1,7 +1,13 @@
 # 👩‍💻 What I learned 📒🚩
 
-### 🌷23.04.03
-- [Django - Authentication system](Django/3week/auth_system.md)
+### 🌷23.04.05
+- [Django - static files](Django/4week/static_files.md)
+
+### 🌷23.04.05
+- [Django - Authentication system 02](Django/3week/auth_system02.md)
+
+### 🌷23.04.04
+- [Django - Authentication system 01](Django/3week/auth_system.md)
 
 ### 🌷23.04.03
 - [Django - Form과 ModelForm](Django/3week/form.md)
