@@ -53,7 +53,7 @@
 
     - 생성된 의존성 파일을 이용해 패키지 목록 설치
       ```bash
-      $ pip install -r requirments.txt
+      $ pip install -r requirements.txt
       ```
       - `requirements.txt`에 있는 내용을 읽어 자동으로 패키지를 설지해줌으로써 해당 프로젝트가 어떤 버전의 패키지를 썼는지 기억하지 않아도 개발환경을 설정할 수 있음
       

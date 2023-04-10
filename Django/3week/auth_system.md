@@ -205,7 +205,7 @@ def logout(request):
 <!-- accounts/index.html -->
 
 <h2>사용자 정보 - {{ user }}</h2> <br>
-{% if user.is_authenticated %}
+{% if request.user.is_authenticated %}
   <h3>{{ user }}님 안녕하세요!</h3>
   <form action="{% url 'accounts:logout' %}" method="POST">
     {% csrf_token %}
@@ -238,4 +238,4 @@ def logout(request):
 
 - context로 직접 작성하여 넘겨주지 않아도 user의 값을 불러올 수 있음
 
-- user.is_authenticated : 인증된 사용자의 경우 True 반환
+- request.user.is_authenticated : 인증된 사용자의 경우 True 반환
