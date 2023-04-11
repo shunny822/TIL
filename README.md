@@ -1,6 +1,9 @@
 # 👩‍💻 What I learned 📒🚩
 
-### 🌷23.04.05
+### 🌷23.04.11
+- [Django - N : 1 관계](Django/4week/many_to_one_01.md)
+
+### 🌷23.04.10
 - [Django - static files](Django/4week/static_files.md)
 
 ### 🌷23.04.05
