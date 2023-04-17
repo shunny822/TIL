@@ -68,7 +68,7 @@ git log --oneline --gragh
 - master(main) : 배포 가능한 상태의 코드
 - develop(main) : feature branch로 나뉘거나 발생된 버그 수정, 개발 이후 release branch로 분기
 - feature branches(supporting) : 기능별 개발 브랜치, 기능이 반영되거나 드랍되는 경우 브랜치 삭제
-- release branches(supporting) : 개발완로 이후 QA/Test 등을 통해 얻어진 다음 배포 전 minor bug fix 등 반영
+- release branches(supporting) : 개발완료 이후 QA/Test 등을 통해 얻어진 다음 배포 전 minor bug fix 등 반영
 - hotfixes(supporting) : 긴급하게 반영해야하는 bug fix, 현재 버전 유지보수를 위한 것
 
 #### cf) 커밋메세지 작성법
