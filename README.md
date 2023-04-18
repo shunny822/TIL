@@ -1,5 +1,8 @@
 # 👩‍💻 What I learned 📒🚩
 
+### 🌹23.04.18
+- [Django - N : M 관계 02 & Fixtures](Django/5week/many_to_many_02.md)
+
 ### 🌹23.04.17
 - [Django - N : M 관계 01](Django/5week/many_to_many_01.md)
 
