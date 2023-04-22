@@ -1,5 +1,8 @@
 # 👩‍💻 What I learned 📒🚩
 
+### 🌹23.04.19
+- [Django - SECRET_KEY관리와 클라우드타입 배포](Django/5week/distribution.md)
+
 ### 🌹23.04.18
 - [Django - N : M 관계 02 & Fixtures](Django/5week/many_to_many_02.md)
 
