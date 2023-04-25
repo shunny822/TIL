@@ -10,7 +10,7 @@
 
 - PUT : 요청한 주소의 리소스를 수정
 
-- DELETE : 지정도니 리소스 삭제
+- DELETE : 지정된 리소스 삭제
 
 ### HTTP response status codes
 
