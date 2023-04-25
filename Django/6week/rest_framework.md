@@ -71,7 +71,7 @@
 
 - app 등록 : settings.py의 INSTALLED_APPS에 'rest_framework' 추가
 
-- python에서 json 응답 받아보
+- python에서 json 응답 받아보기
   ```python
   import requests
   from pprint import pprint
