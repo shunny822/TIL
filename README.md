@@ -1,7 +1,10 @@
 # 👩‍💻 What I learned 📒🚩
 
 ### 🌹23.04.25
-- [Django - rest framework](Django/6week/rest_framework.md)
+- [Django - rest framework 02](Django/6week/rest_framework02.md)
+
+### 🌹23.04.24
+- [Django - rest framework 01](Django/6week/rest_framework.md)
 
 ### 🌹23.04.19
 - [Django - SECRET_KEY관리와 클라우드타입 배포](Django/5week/distribution.md)
