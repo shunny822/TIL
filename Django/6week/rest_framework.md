@@ -10,7 +10,7 @@
 
 - PUT : 요청한 주소의 리소스를 수정
 
-- DELETE : 지정도니 리소스 삭제
+- DELETE : 지정된 리소스 삭제
 
 ### HTTP response status codes
 
@@ -71,7 +71,7 @@
 
 - app 등록 : settings.py의 INSTALLED_APPS에 'rest_framework' 추가
 
-- python에서 json 응답 받아보
+- python에서 json 응답 받아보기
   ```python
   import requests
   from pprint import pprint
