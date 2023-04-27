@@ -132,6 +132,9 @@
 - [데이터베이스 - Workbench 가이드](Database/Workbench_guide.md)
 
 ------------------------------------------------
+### ⚡ 23.04.27
+- [알고리즘 - monotone stack](Algorithm/monotone_stack.md)
+
 ### ⚡ 23.03.25
 - [알고리즘 - 이진탐색](Algorithm/binary_search.md)
 
