@@ -1,6 +1,9 @@
 # 👩‍💻 What I learned 📒🚩
 
 ### 🌹23.04.25
+- [Django - Improve Query](Django/6week/improve_query.md)
+
+### 🌹23.04.25
 - [Django - rest framework 02](Django/6week/rest_framework02.md)
 
 ### 🌹23.04.24
