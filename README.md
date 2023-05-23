@@ -1,6 +1,9 @@
 # 👩‍💻 What I learned 📒🚩
 
-### 🌹23.04.25
+### 🌹23.05.01
+- [Django - multiple images input](Django/6week/multiple_files.md)
+
+### 🌹23.05.01
 - [Django - Improve Query](Django/6week/improve_query.md)
 
 ### 🌹23.04.25
