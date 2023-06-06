@@ -1,5 +1,7 @@
 # 👩‍💻 What I learned 📒🚩
 
+- [Django - password hasher](Django/6week/hasher.md)
+
 ### 🌹23.05.01
 - [Django - multiple images input](Django/6week/multiple_files.md)
 
