@@ -1,5 +1,6 @@
 # 👩‍💻 What I learned 📒🚩
 
+- [Django - login next](Django/6week/login_next.md)
 - [Django - password hasher](Django/6week/hasher.md)
 
 ### 🌹23.05.01
