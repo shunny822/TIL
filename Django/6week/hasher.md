@@ -14,18 +14,8 @@ Argon2는 차세대 해싱 알고리즘으로 2015년 Password Hashing Competiti
     $ pip install argon2-cffi
     ```
 
-2. settings.py 설정
-    ```python
-    PASSWORD_HASHERS = [
-        "django.contrib.auth.hashers.Argon2PasswordHasher", # Argon2가 가장 위에 있어야 함
-        "django.contrib.auth.hashers.PBKDF2PasswordHasher",
-        "django.contrib.auth.hashers.PBKDF2SHA1PasswordHasher",
-        "django.contrib.auth.hashers.BCryptSHA256PasswordHasher",
-        "django.contrib.auth.hashers.ScryptPasswordHasher",
-    ]
-    ```
 
-3. view함수에서 사용
+2. view함수에서 사용
     ```python
     from argon2 import PasswordHasher
 
