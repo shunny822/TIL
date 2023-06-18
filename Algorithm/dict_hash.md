@@ -9,7 +9,7 @@
 
 - 해시 : 해시 함수를 통해 얻어진 값
 
-![해시테이블](hash_table.png)
+![해시테이블](img/hash_table.png)
 
 <br>
 

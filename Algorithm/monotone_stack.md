@@ -10,7 +10,7 @@
 
 숫자 10, 7, 5, 8, 6 이 순서대로 입력되었을 때 stack 내림차순으로 유지
 
-![monotone stack](./monotone_stack.jpg)
+![monotone stack](img/monotone_stack.jpg)
 
 
 ### 예제
