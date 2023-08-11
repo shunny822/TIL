@@ -95,3 +95,9 @@ HTTP/2 - 병렬 요청이 동일한 커넥션 상에서 다루어질 수 있는 
 ![HTTP/2](./image/HTTP2.png)
 
 HTTP/3 - QUIC, 구글이 만들었음.
+
+<br>
+
+## 참고자료
+
+https://hahahoho5915.tistory.com/62
