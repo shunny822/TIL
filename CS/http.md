@@ -30,7 +30,7 @@ HTTP는 TCP/IP를 전송 프로토콜로 사용하는데 흐름은 아래와 같
 
 <br>
 
-## Response & Request
+## Request & Response
 
 통신 과정에서 주고 받는 요청과 응답은 아래와 같은 구조로 이루어져 있다.
 
@@ -95,6 +95,7 @@ HTTP/2 - 병렬 요청이 동일한 커넥션 상에서 다루어질 수 있는 
 ![HTTP/2](./image/HTTP2.png)
 
 HTTP/3 - QUIC, 구글이 만들었음.
+
 
 <br>
 
