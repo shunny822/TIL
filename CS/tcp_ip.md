@@ -74,3 +74,5 @@ Segment는 TCP가 실을 수 있는 데이터의 크기이다.
 https://aws-hyoh.tistory.com/entry/TCPIP-쉽게-이해하기
 
 https://mangkyu.tistory.com/15
+
+https://jeongkyun-it.tistory.com/180
