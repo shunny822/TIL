@@ -1,3 +1,12 @@
+# HTTP
+
+## 목차
+
+- [Protocol](#protocol)
+- [HTTP](#http-1)
+- [HTTP version](#http-version)
+- [참고 자료](#참고자료)
+
 ## protocol
 
 둘 이상의 통신 개체 간에 교환되는 메시지 포맷과 순서뿐만 아니라, 메시지의 송수신과 다른 이벤트에 따른 행동들을 정의한다.
@@ -87,8 +96,9 @@ HTTP는 TCP/IP를 전송 프로토콜로 사용하는데 흐름은 아래와 같
     
   request body와 동일
 
+<br>
 
-### HTTP version
+## HTTP version
 
 HTTP/2 - 병렬 요청이 동일한 커넥션 상에서 다루어질 수 있는 다중화 프로토콜
 
@@ -99,6 +109,6 @@ HTTP/3 - QUIC, 구글이 만들었음.
 
 <br>
 
-## 참고자료
+## 참고 자료
 
 https://hahahoho5915.tistory.com/62
