@@ -1,8 +1,24 @@
 # 데이터베이스
 
+## 목차
+
+- [Data](#데이터-data)
+- [Database](#데이터베이스)
+- [관계형 데이터베이스](#관계형-데이터베이스-relational-database)
+- [RDBMS](#rdbms)
+    - [Index](#index)
+    - [Clustered Index](#clustered-index)
+    - [Non-Clustered Index](#non-clustered-index)
+    - [MVCC](#mvcc)
+
 ## 데이터 Data
 
 > 저장이나 처리에 효율적인 형태로 변환된 정보
+
+### CSV
+
+comma-separated values로 몇 가지 필드를 쉼표로 구분한 텍스트 데이터 및 텍스트 파일이다. 일반적으로 CSV 파일은 한 응용 프로그램에서 다른 응용 프로그램으로 데이터를 전송하는 데 사용된다.
+
 
 ### 과거의 데이터 저장 방식
 1. 파일 : 어디에서나 쉽게 사용 가능, but 데이터를 구조적으로 관리X
@@ -81,11 +97,111 @@
 
 6. Foreign Key(FK, 외래 키) : 테이블 필드 중 다른 테이블의 레코드를 식별할 수 있는 키
 
+<br>
 
-### RDBMS
+## RDBMS
 
-Relational Database Management System : 관계형 데이터베이스를 관리하는 sw프로그램
+Relational Database Management System : 관계형 데이터베이스를 관리하는 sw프로그램으로 MySQL, Oracle 등이 있다.
 
-- 데이터 저장 및 관리를 용이하게 하는 시스템
+이는 데이터 저장 및 관리를 용이하게 하고, 데이터베이스와 사용자 간의 인터페이스 역할(데이터 구성, 업데이트, 모니터링, 백업, 복구 등을 할 수 있도록)을 한다.
 
-- 데이터베이스와 사용자 간의 인터페이스 역할(데이터 구성, 업데이트, 모니터링, 백업, 복구 등을 할 수 있도록)
+특징은 아래와 같다.
+
+1. 페이지 단위의 IO 수행하여 부분 업데이트가 가능하다.
+
+2. Clustered Index 방식으로 데이터를 효과적으로 읽고 쓸 수 있다.
+
+3. B+tree index를 사용하여 효율적인 레코드 검색이 가능하다.
+
+4. soft delete, outplace-update에 가까운 복잡한 방식의 업데이트 및 삭제를 지원한다.
+    - soft delete(논리 삭제)는 데이터를 실제로 삭제하지 않고 삭제 flag를 변경하는 방법으로 삭제한 데이터도 보관이 필요할 때 사용한다.
+    
+    - hard delete(물리 삭제)는 실제로 데이터를 삭제하는 방법이다.
+
+5. 동시성을 높이고 transaction을 지원하기 위해 MVCC(multiversion concurrency control) 메커니즘을 사용한다.
+
+
+### Index
+
+Index는 RDBMS에서 검색 속도를 높이기 위한 기술이다. TABLE의 컬럼을 따로 파일로 저장(색인화)하여 검색 시 TABLE의 레코드를 Full scan하는 것이 아니라 해당 컬럼의 파일만 검색하여 검색(SELECT) 속도를 빠르게 한다. DELETE, INSERT, UPDATE 시에는 오히려 Index 사용 시 느려진다.
+
+#### B+Tree 알고리즘
+
+B+tree는 Index 자료구조인 B-tree(Balanced Tree)의 확장된 개념이다.
+
+![B-tree](./image/B-tree.png)
+
+B-tree는 데이터가 정렬된 상태를 유지하며, 이진트리를 확장하여 N개의 자식을 가질 수 있다.
+
+가장 상단의 Root Node(1개 존재), 중간 노드인 Branch Node, 최하위 노드인 Leaf Node로 이루어져 있다. 그리고 좌우 자식 간의 depth 균형이 맞지 않을 경우 비효율적이므로 B-tree는 균형 트리이다.
+
+인덱스 키를 바탕으로 항상 정렬된 상태를 유지하며 정렬된 인덱스 키를 따라 리프 노드에 도달 시 (index key, PK)쌍으로 저장되어 있다. 이렇게 찾은 PK로 레코드를 조회한다. 이러한 방식으로 key 값으로 데이터를 찾기 때문에 Full scan에 비해 검색 속도가 빠르다.
+
+![B+tree](./image/B+tree.png)
+
+B-tree는 branch에 key와 data를 둘 다 담는데 이와 다르게 B+tree는 branch node에 key만 담고, leaf node만이 key와 data를 모두 담는다. leaf node끼리는 linked list로 연결되어 있다.
+
+이러한 특징으로 인한 장점은 아래와 같다.
+
+1. 리프노드를 제외하고는 데이터를 담지 않기 때문에 메모리를 확보하여 더 많은 key를 수용할 수 있다(=트리의 높이가 낮아진다).
+2. Full scan 시 B-tree는 모든 노드를 확인해야 하지만 B+tree는 leaf node에 모든 데이터가 있어 한 번의 선형탐색만 하면 되기 때문에 더 빠르다.
+
+
+### Clustered Index
+
+TABLE의 레코드를 지정된 컬럼을 기준으로 물리적 재배열하며 데이터 삽입, 수정, 삭제 시에도 데이터를 정렬한다. Clustered Index는 테이블 당 한 개만 존재 가능하기 때문에 테이블에서 Index를 걸면 가장 효율적인 컬럼을 Clustered Index로 지정한다.
+
+Clustered Index는 데이터를 해당 컬럼으로 정렬한 후 루트 페이지를 만들고 루트 페이지와 리프 페이지로 구성되며 리프 페이지는 데이터 그 자체이다. 물리적으로 정렬되어 있기 때문에 검색 속도는 Non-Clustered Index보다 빠르나 삽입, 수정, 삭제 시에도 정렬을 수행하기 때문의 삽입, 수정, 삭제 속도는 더 느리다.
+
+
+### Non-Clustered Index
+
+Non-Clustered Index는 물리적으로 데이터를 배열하지 않은 상태로 지정된 컬럼에 대해 정렬시킨 인덱스만 만든다. 그러므로 테이블 당 여러 개 존재 가능하다.
+
+
+### MVCC
+
+Multi-Version Concurrency Control : 다중 버전 동시성 제어
+
+#### 동시성 제어
+
+DBMS가 다수의 사용자 사이에서 동시에 작용하는 다중 트랜젝션의 상호간섭 작용에서 DB를 보호하는 것을 의미한다. 동시성 제어를 할 수 있도록 Lock 기능, `SET TRANSACTION`를 이용하여 격리성 수준을 조정할 수 있는 기능이 있고, 낙관적 동시성 제어와 비관적 동시성 제어 방법이 있다.
+
+1. 낙관적 동시성 제어
+    - 사용자들이 같은 데이터를 동시에 수정하지 않을 것이라고 가정
+    - 데이터를 읽는 시점에 Lock을 걸지 않는 대신 수정 시점에 값이 변경되었는지를 반드시 검사
+
+2. 비관적 동시성 제어
+    - 사용자들이 같은 데이터를 동시에 수정할 것이라고 가정
+    - 데이터를 읽는 시점에 Lock을 걸고 트랜젝션이 완료될 때까지 Lock 유지
+
+*Lock : 비관적 동시성 제어를 위한 방법으로 공유락(Shared Lock)-읽기 잠금, 베타락(Exclusive Lock)-쓰기 잠금이 있다.
+
+Lock은 읽기 작업과 쓰기 작업에 서로 방해를 일으키기 때문에 동시성 문제가 발생할 수 있고, 데이터 일관성 문제로 Lock을 더 오래 유지하는 경우 동시성 저하가 발행한다. 이러한 문제점을 해결하기 위해 MVCC가 나왔다.
+
+#### 다중 버전 동시성 제어
+
+MVCC에서 데이터에 접근하는 사용자는 접근한 시점에 데이터베이스의 Snapshot을 읽고, 이 snapshot 데이터에 대한 변경이 commit될 때 까지의 변경사항은 다른 사용자가 볼 수 없다. 이후 commit하면 데이터를 덮어씌우는 것이 아니라 새로운 버전의 데이터를 이전 버전과 비교하여 변경된 내용을 기록한다. 이렇게 여러 버전의 데이터가 존재하며 사용자는 마지막 버전의 데이터를 읽게 된다. (git과 굉장히 유사하다고 느꼈다) 특징은 아래와 같다.
+
+- Lock이 필요하지 않기 때문에 매우 빠르다.
+
+- 사용하지 않는 데이터가 계속 쌓이므로 데이터를 정리하는 시스템이 필요하다.
+
+- 데이터 버전이 충돌하면 애플리케이션 영역에서 문제를 해결해야 한다.
+
+
+<br>
+
+## 참고 자료
+
+https://velog.io/@taeha7b/hard-delete-softdelete
+
+https://velog.io/@gillog/SQL-Index%EC%9D%B8%EB%8D%B1%EC%8A%A4
+
+https://zorba91.tistory.com/293
+
+https://mangkyu.tistory.com/286
+
+https://velog.io/@gillog/SQL-Clustered-Index-Non-Clustered-Index
+
+https://mangkyu.tistory.com/53
