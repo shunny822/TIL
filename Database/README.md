@@ -1,5 +1,4 @@
 ## ➰ Database
-<hr>
 
 - [Workbench 가이드](Workbench_guide.md)
 

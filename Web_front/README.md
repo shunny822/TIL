@@ -1,6 +1,5 @@
 ## 🌈 HTML & CSS & JS
 
-<hr>
 
 ### 🎨 HTML
 
@@ -22,18 +21,3 @@
 - [Bootstrap Grid system](grid_system.md)
 
 - [Bootstrap 반응형 웹 디자인](responsive_design.md)
-
-
-### 🎨 JavaScript
-
-- [basic](javascript01.md)
-
-- [syntax](javascript02.md)
-
-- [array](js_array.md)
-
-- [object](js_object.md)
-
-- [function](js_function.md)
-
-- [event handler](event.md)

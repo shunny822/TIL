@@ -1,5 +1,4 @@
 ## 🌱 Python
-<hr>
 
 - [변수와 객체](./python_basic.md)
 

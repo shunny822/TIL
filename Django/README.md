@@ -1,5 +1,5 @@
 ## 🌳 Django
-<hr>
+
 
 ### 🪄 Flow
 

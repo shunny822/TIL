@@ -5,20 +5,22 @@
 <hr>
 
 
-### [🎈 Markdown & Github](Git/README.md)
-
 ### [🌱 Python](Python/README.md)
-
-### [🗝️ API 활용](API.md)
-
-### [⚡ Data Structure & Algorithm](Algorithm/README.md)
-
-### [➰ Database](Database/README.md)
-
-### [🌈 HTML & CSS & JS](Web_front/README.md)
 
 ### [🌳 Django](Django/README.md)
 
+### [⚡ Data Structure & Algorithm](Algorithm/README.md)
+
+### [🌈 HTML & CSS](Web_front/README.md)
+
+### [🪅 JavaScript](JavaScript/README.md)
+
+### [➰ Database](Database/README.md)
+
 ### [🖥️ CS](CS/README.md)
+
+### [🎈 Markdown & Github](Git/README.md)
+
+### [🗝️ API 활용](API.md)
 
 ### [🚀 Deploy](Deploy/README.md)
