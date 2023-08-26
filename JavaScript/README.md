@@ -1,6 +1,8 @@
 ## 🪅 JavaScript
 
-- [basic](./javascript01.md)
+- [HTML에서 JS file fetching](./defer.md)
+
+- [DOM과 DOM 조작](./javascript01.md)
 
 - [syntax](./javascript02.md)
 
