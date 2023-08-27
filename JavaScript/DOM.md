@@ -25,17 +25,20 @@
 
 
 ### DOM Query(선택)
-- `document.querySelector()`
-  - 제공한 선택자와 일치하는 element 한개 선택
+- `querySelector()`
+  - 제공한 선택자와 일치하는 elements 중 가장 먼저 일치한 element 한 개 선택
 
   - 요소가 없다면 null 반환
 
-- `document.querySelectorAll()`
+- `querySelectorAll()`
   - 제공한 선택자와 일치하는 여러 element를 선택
 
   - 매칭할 하나 이상의 셀렉터를 포함하는 유효한 CSS Selector를 인자로 받음
 
   - 제공한 CSS selector를 만족하는 NodeList를 반환
+
+- `getElementById()`
+  - 제공한 id와 일치하는 element 선택
 
 - 예시
   ```html

@@ -1,8 +1,8 @@
 ## 🪅 JavaScript
 
-- [HTML에서 JS file fetching](./defer.md)
+- [JavaScript와 DOM](./javascript01.md)
 
-- [DOM과 DOM 조작](./javascript01.md)
+- [HTML에서 JS file fetching](./defer.md)
 
 - [syntax](./javascript02.md)
 
