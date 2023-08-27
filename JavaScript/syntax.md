@@ -1,9 +1,23 @@
 # Basic Syntasx
 
-## 개요
+## 목차
+
+- [Style guide](#style-guide)
+- [Syntax](#문법)
+  - [Variable](#1-변수)
+  - [Data type](#2-데이터-타입)
+  - [Operator](#3-연산자)
+  - [조건문](#4-조건문)
+  - [반복문](#5-반복문)
+- [for in과 for of의 차이](#forin과-forof의-차이)
+- [참고 자료](#참고-자료)
+
+
+<br>
+
+## Style guide
 - ECMAScript 2015(ES6) 이후의 문서 참고하기
 
-### Style guide
 - 들여쓰기 시 2칸 공백
 
 - 문자열에 작은 따옴표를 사용
@@ -12,14 +26,12 @@
 
 - 연산자 사이에 공백
 
-- 세미콜론 사용하지 않음
-
 <br>
 
 ## 문법
 ### 1. 변수
 - 작성 규칙
-  - 반드시 문자, $, _ 로 시작
+  - 반드시 문자 또는 '$' 또는 '_' 로 시작
 
   - 대소문자를 구분하며, 클래스명 외에는 모두 소문자로 시작
 
@@ -44,10 +56,14 @@
     // 선언 시 초기값 설정 필요
     const number // -> const' declarations must be initialized.
     ```
+    - 값의 재할당이 불가능하기 때문에 보안, thread safety(동시에 작업될 경우), 개발자의 실수 등을 줄여준다. 따라서 const 사용을 권장하며 재할당을 해야 하는 경우만 let을 사용한다.
 
   - block scope : if, for, 함수 등의 중괄호'{}' 내부를 가리킴, 이 내부의 변수는 바깥에서 접근 불가능
 
-  - 기본적으로 const 사용을 권장하며 재할당을 해야 하는 경우만 let을 사용
+  - 'var'는 옛날 문법으로 사용하지 않는데 그 이유는 아래와 같다.
+    - var는 hoisting 시 undefined로 초기화되어 변수에 값을 할당하기도 전에 사용이 가능해져버린다.
+
+    - block에서 선언해도 block 밖에서 사용이 가능해버린다..
 
 
 ### 2. 데이터 타입
@@ -73,6 +89,17 @@
     - 또 하나의 bug : null이 원시 자료형임에도 불구하고 자료형이 object로 출력됨
 
   - Boolean : true / false, 조건문 또는 반복문에서 undefined, null, 0, NaN, 빈 문자열은 false, 그 외는 true
+
+  - Symbol : create unique identifiers for objects
+    ```js
+    const symbol1 = Symbol('id');
+    const symbol2 = Symbol('id');
+
+    console.log(symbol1 === symbol2); // false
+
+    // symbol 자체를 출력할 때는 .description
+    console.log(symbol1.description);
+    ```
 
 
 - 참조 자료형(Reference type) : 객체의 주소가 저장되는 자료형(가변, 주소가 복사)
@@ -150,7 +177,7 @@
       console.log(fruits[key])
     }
     ```
-  - 배열도 순회 가능하지만 인덱스 순으로 순회한다는 보장이 없으므로 권장하지 음
+  - 배열도 순회 가능하지만 인덱스 순으로 순회한다는 보장이 없으므로 권장하지 않음
 
 - for...of : 반복 가능한 객체(배열, 문자열 등)를 순회할 때 사용
   ```js
@@ -195,3 +222,9 @@ for (const i of arr) {
   - 재할당이 아니라 매 반복 시 해당 변수를 새로 정의하여 사용
 
   - const를 사용해도 에러가 발생하지 않음
+
+<br>
+
+## 참고 자료
+
+https://www.youtube.com/watch?v=OCCpGh4ujb8&list=PLv2d7VI9OotTVOL4QmPfvJWPJvkmv6h-2&index=3

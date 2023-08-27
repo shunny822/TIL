@@ -4,7 +4,7 @@
 
 - [HTML에서 JS file fetching](./defer.md)
 
-- [syntax](./javascript02.md)
+- [syntax](./syntax.md)
 
 - [array](./js_array.md)
 
