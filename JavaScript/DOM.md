@@ -1,5 +1,16 @@
 # JavaScript and DOM
 
+## 목차
+- [JavaScript](#javascript)
+- [DOM](#dom--document-object-model)
+  - [개념](#개념)
+  - [DOM query](#dom-query선택)
+  - [DOM 조작](#dom-manipulation조작)
+- [참고 사항-parsing](#참고-사항)
+- [참고 자료](#참고-자료)
+
+<br/>
+
 ## JavaScript
 
 - 웹 페이지의 동적인 기능을 구현하기 위한 웹 브라우저에서의 JavaScript를 학습
@@ -8,7 +19,7 @@
 
 - JavaScript 실행환경 : HTML script 태그, js 확장자 파일, 브라우저 Console
 
-<br>
+<br/>
 
 ## DOM : Document Object Model
 
@@ -71,6 +82,8 @@
       - 요소의 클래스 목록을 DOMTokenList(유사 배열) 형태로 반환
 
       - .add()와 .remove() 메서드를 사용해 지정한 클래스 값을 추가 혹은 제거
+
+      - .contains() 메서드로 클래스 리스트에 특정 클래스 포함 여부 반환
 
       ```html
       <script>
@@ -149,10 +162,17 @@
     </script>
     ```
 
-<br>
+<br/>
 
-## 참고사항
+## 참고 사항
 ### Parsing
 - 구문 분석, 해석
 
 - 브라우저가 문자열을 해석하여 DOM Tree로 만드는 과정
+
+
+<br/>
+
+## 참고 자료
+
+https://developer.mozilla.org/en-US/docs/Web/API/Element/classList
