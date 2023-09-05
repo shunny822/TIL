@@ -17,4 +17,9 @@
 - [HTTP](./http.md)
 
 
+### 👩‍💻 Linux
+
+- [Ubuntu에 MySQL 서버 설치](./mysql_to_ubuntu.md)
+
+
 ### 👩‍💻 Operating System
