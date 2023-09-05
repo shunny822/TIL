@@ -1,12 +1,46 @@
 # SQL 심화
 
+## 목차
+- [Transaction](#transactions)
+  - [개념](#트랜젝션이란)
+  - [ACID](#transaction의-성질-acid)
+  - [기본 문법](#기본-문법)
+- [Trigger](#triggers)
+  - [개념](#트리거란)
+  - [기본 문법](#기본문법)
+- [참고 사항](#참고-사항)
+- [참고 자료](#참고-자료)
+
+<br>
+
 ## Transactions
 
-### 개념
+### 트랜젝션이란
 
 - 여러 쿼리문을 묶어 하나의 작업처럼 처리하는 방법
 
 - 이때 쿼리문들은 다 성공하던지 or 다 실패하던지!!
+
+
+### Transaction의 성질: ACID
+- Atomicity : 원자성
+
+  트랜젝션 단위의 작업이 모두 반영되거나 모두 롤백된다. 
+
+- consistency : 일관성
+
+  하나의 트랜젝션 이전과 이후에서 데이터베이스의 상태는 이전과 같이 유효해야 한다. 이는 데이터베이스의 제약이나 규칙을 만족하는 상태를 유지해야 한다는 뜻이다.
+
+  ex) '모든 고객은 이름을 가지고 있어야 한다.'와 같은 제약이 있는 경우 이름이 없는 고객을 추가하는 쿼리를 사용하는 경우 제약을 위반하게 된다.
+
+- Isolation : 고립성
+
+  모든 트랜젝션은 다른 트랜젝션들로부터 독립되어야 한다. 동시에 여러 트랜젝션이 수행될 경우 서로 영향을 미치게 되면 결과가 달라질 수 있다.
+
+- Durability : 영구성
+
+  한번 커밋된 트랜젝션은 영구적으로 적용된다.
+
 
 
 ### 기본 문법
@@ -47,14 +81,11 @@ state_ments;
   - MySQL은 기본적으로 변경사항을 자동 COMMIT하기 때문에 비활성화(활성화하려면 1로 다시 작성)
 
 
-
-
-
 <br>
 
 ## Triggers
 
-### 개념
+### 트리거란
 
 - 특정 이벤트(INSERT, UPDATE, DELETE)에 대한 응답으로 자동실행되는 것
 
@@ -110,7 +141,7 @@ CREATE TRIGGER trigger_name
 
 <br>
 
-## 참고
+## 참고 사항
 
 ### Triggers 생성 시 에러
 - 트랜젝션 생성 후 정상적으로 종료되지 않아 발생하는 다음과 같은 에러 해결법
@@ -123,3 +154,9 @@ SELECT * FROM information_schema.INNODB_TRX;
 -- 특정 프로세스의 trx_mysql_thread_id 삭제
 KILL [trx_mysql_thread_id1];
 ```
+
+<br>
+
+## 참고 자료
+
+https://hanamon.kr/%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4-%ED%8A%B8%EB%9E%9C%EC%9E%AD%EC%85%98%EC%9D%98-acid-%EC%84%B1%EC%A7%88/

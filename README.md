@@ -11,7 +11,7 @@
 
 ### [⚡ Data Structure & Algorithm](Algorithm/README.md)
 
-### [🌈 HTML & CSS](Web_front/README.md)
+### [🌈 Web & HTML & CSS](Web_front/README.md)
 
 ### [🪅 JavaScript](JavaScript/README.md)
 
