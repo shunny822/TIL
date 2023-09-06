@@ -1,4 +1,9 @@
-## 🌈 HTML & CSS & JS
+## 🌈 Web & HTML & CSS
+
+
+### 🎨 Web
+
+- [SSR과 CSR](./ssr_csr.md)
 
 
 ### 🎨 HTML
@@ -7,6 +12,8 @@
 
 
 ### 🎨 CSS
+
+- [px, rem, em의 차이](./length.md)
 
 - [CSS Box Model](box_model.md)
 
