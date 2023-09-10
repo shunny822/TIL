@@ -41,7 +41,6 @@ CREATE TABLE examples (
   - 기본적으로 NOT NULL 제약조건을 포함
 
 
-
 ### Table 구조 확인
 ```sql
 SHOW COLUMNS FROM examples;
@@ -56,6 +55,29 @@ SHOW COLUMNS FROM examples;
   - TEXT는 large text data를 받으며 따로 길이를 지정하지 않음(길이 제한은 있으나 매우 큼)
 
 - Data and Time(날짜형) : DATE, DATETIME, ...
+
+
+### 외래키
+
+```sql
+CREATE TABLE examples (
+    examId INT AUTO_INCREMENT,
+    lastName VARCHAR(50) NOT NULL,
+    firstName VARCHAR(50) NOT NULL,
+    PRIMARY KEY (examId),
+    FOREIGN KEY(UID) REFERENCES USER(ID)
+    ON DELETE CASCADE ON UPDATE CASCADE;
+);
+```
+외래키는 현재 테이블에서 다른 테이블의 데이터를 참조할 때 사용하는 id값이다. 참조무결성의 원칙에 의해 FK는 id값 또는 null값이어야 한다.
+
+constraints에 외래키를 작성할 때 `FOREIGN KEY(내가 쓸 필드명) REFERENCES table_name(필드명)`으로 지정할 수 있다. 그리고 참조하는 데이터가 삭제될 경우(ON DELETE)와 수정될 경우(ON UPDATE)에 해당 데이터의 FK값을 어떻게 관리할 지 명시할 수 있다. 동작의 종류는 다음과 같다.
+- `CASCADE` : 참조하는 데이터 삭제/변경 시 해당 데이터도 삭제
+- `SET NULL` : 참조하는 데이터 삭제/변경 시 해당 데이터의 FK값을 NULL로 set
+- `SET DEFAULT` : 참조하는 데이터 삭제/변경 시 해당 데이터의 FK값은 지정한 디폴트값으로 변경
+- `NO ACTION` : 참조하는 데이터 삭제/변경 시에도 해당 데이터는 변경 없음
+- `RESTRICT` : 참조하는 테이블에 데이터가 남아 있으면, 참조되는 테이블의 데이터를 삭제하거나 수정할 수 없음
+
 
 <br>
 
@@ -154,3 +176,10 @@ DROP COLUMN
 - 데이터베이스를 사용하는 프로그램에 따라 NULL을 저장할 필요가 없는 경우가 많아 되도록 NOT NULL로 정의
 
 - '값이 없다'라는 표현은 테이블에 0이나 빈 문자열로 기록하는 것을 권장!!
+
+
+<br>
+
+## 참고 자료
+
+http://www.tcpschool.com/mysql/mysql_constraint_foreignKey
