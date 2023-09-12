@@ -14,7 +14,7 @@
 
 - [function](./js_function.md)
 
-- [event handler](./event.md)
+- [event 다루기](./event.md)
 
 
 ### 🍧 Node.js

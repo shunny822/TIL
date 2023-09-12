@@ -1,5 +1,15 @@
 # Controlling event
 
+## 목차
+- [Event](#event)
+  - [event handler](#event-handler)
+  - [event handler 활용](#event-handler-활용)
+  - [lodash](#lodash)
+- [Event Trigger](#event-trigger)
+- [참고 자료](#참고-자료)
+
+<br>
+
 ## Event
 
 > 무언가 일어났다는 신호, 사건
@@ -162,3 +172,37 @@
 - 모듈성, 성능 및 추가 기능을 제공하는 JS 유틸리티 라이브러리
 
 - [lodash site](https://lodash.com/)
+
+
+<br>
+
+## Event Trigger
+
+event trigger를 함수로 정의하여 원하는 event를 원하는 element에 발생시킬 수 있다.
+
+```js
+const inputEventTrigger = (element) => {
+  const event = new Event('input', {
+    bubbles: true,
+    cancelable: true,
+  });
+  element.dispatchEvent(event);
+}
+```
+이와 같이 Event 객체를 생성하여 커스텀하고 이를 `dispatchEvent()` method로 element에 적용하는 방식으로 사용된다.
+
+- Event instance의 property는 위에 사용한 것 외에도 `currentTarget`, `defaultPrevented` 등 매우 다양하나 자주 사용되는 `bubbles`, `cancelable`에 대해 알아보자.
+    
+    - `bubbles` : 이벤트가 DOM을 통해 bubble up(이벤트 발생)되는지 여부 true/false
+    - `cancelable` : 이벤트를 취소할 수 있는지 여부 true/false
+
+- `eventTarget.dispatchEvent(event)` : eventTaget에 해당 event를 발생시킴
+
+
+<br>
+
+## 참고 자료
+
+https://developer.mozilla.org/en-US/docs/Web/Events/Creating_and_triggering_events
+
+https://developer.mozilla.org/en-US/docs/Web/API/Event
