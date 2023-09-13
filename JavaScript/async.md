@@ -67,7 +67,9 @@ console.log('end');
 
 이와 같이 비동기로 작동하는 함수는 콜백 큐에 쌓이고 이벤트 루프가 지속적으로 콜스택, 콜백큐를 확인한다. 콜스택이 비어있고 수행 대기 중인 메세지가 있으면 메세지를 콜스택으로 이동시켜 실행되는 구조이다. 
 
-또 다른 예시로는 event listner가 있다. event listner를 적용한 DOM element에서 event가 발생하면 event handler가 콜백 큐에 추가된다.
+event listner를 적용한 DOM element에서 event가 발생하면 event handler가 콜백 큐에 추가된다.
+
+또한 setTimeout(func, 0)을 사용하는 것이 콜스택이 비워질 때까지 기다리기 위하는 것임을 이제 알 수 있다!!
 
 
 ### 비동기 내장함수
@@ -90,7 +92,9 @@ console.log('end');
       .then(callback func)
       .catch(error handling)
     ```
-    간략하게 하자면 이런 형식으로 쓰이는데 fetch로 Promise가 반환되고 이에 대해 `then`과 `catch`를 chaining하여 사용한다. 여기서 오해할 수 있는 부분은 fetch가 Promise를 반환할 때까지 blocking되었다가 반환하면 then이 실행된다고 생각할 수 있다. 하지만 fetch함수 동작 시 blocking 되는 것이 아니라 `then`은 응답을 받으면 수행될 callback 함수를 callback queue에 추가하는 것이고 나중에 응답이 오면 이 콜백함수가 콜스택으로 이동하여 실행되는 것이다!!
+    간략하게 하자면 이런 형식으로 쓰이는데 fetch로 Promise가 반환되고 이에 대해 `then`과 `catch`를 chaining하여 사용한다. 여기서 오해할 수 있는 부분은 fetch가 Promise를 반환할 때까지 blocking되었다가 반환하면 then이 실행된다고 생각할 수 있다. 하지만 fetch함수 동작 시 blocking 되는 것이 아니라 `then`은 응답을 받으면 수행될 callback 함수를 callback queue에 즉시 추가하는 것이고 나중에 응답이 오면 이 콜백함수가 콜스택으로 이동하여 실행되는 것이다!!
+
+    즉, promise가 resolve되면 첫번째 콜백함수의 인자로 들어감 -> 콜스택으로 올라와 실행됨. 그 후 연결된 두번째 콜백함수의 인자로 들어가면 또 콜스택으로 올라와 실행됨.
 
 ### 비동기 처리
 
@@ -121,14 +125,15 @@ console.log('end');
       - 예시
         ```js
         function getImage(file) {
-        return new Promise((resolve, reject) => {
-          try {
-            const data = readFile(file);
-            resolve(data);
-          } catch(err) {
-            reject(new Error(err));
-          }
-        })
+          return new Promise((resolve, reject) => {
+            try {
+              const data = readFile(file);
+              resolve(data);
+            } catch(err) {
+              reject(new Error(err));
+            }
+          })
+        }
 
         getImage(file)
           .then(image => console.log(image))
