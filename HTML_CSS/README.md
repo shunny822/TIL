@@ -1,11 +1,5 @@
 ## 🌈 Web & HTML & CSS
 
-
-### 🎨 Web
-
-- [SSR과 CSR](./ssr_csr.md)
-
-
 ### 🎨 HTML
 
 - [HTML과 CSS 기초](web_basic.md)
